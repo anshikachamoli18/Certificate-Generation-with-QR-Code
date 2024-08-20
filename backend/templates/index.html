@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Certificate Generator</h1>
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="name">Recipient's Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="event_name">Event Name</label>
+                <input type="text" id="event_name" name="event_name" required>
+            </div>
+            <div class="form-group">
+                <label for="details">Recipient's Details (URL or Text)</label>
+                <input type="text" id="details" name="details" required>
+            </div>
+            <button type="submit">Generate Certificate</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
